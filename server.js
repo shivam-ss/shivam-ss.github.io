@@ -5,7 +5,7 @@ const port = 3000;
 
 // Set public folder as root
 app.use(express.static('public'));
-
+app.use(app.router);
 // Provide access to node_modules folder
 app.use('/scripts', express.static(`${__dirname}/node_modules/`));
 
